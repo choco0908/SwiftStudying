@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="edX-oB-S1z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,27 +7,104 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--MainPage-->
+        <scene sceneID="YDd-4a-kfQ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Todobox" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController title="MainPage" id="edX-oB-S1z" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aJn-86-h1P">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BUe-0o-5AU" kind="relationship" relationship="rootViewController" id="78X-G5-sxh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lK5-LA-Ebh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-800" y="100"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mNd-7s-Rdc">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BUe-0o-5AU" customClass="ViewController" customModule="Todobox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DUn-CE-cqF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lkt-Bg-yHq">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFO-vM-avt">
+                                <rect key="frame" x="174" y="430" width="72" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Move"/>
+                                <connections>
+                                    <action selector="clickMoveBtn:" destination="BUe-0o-5AU" eventType="touchUpInside" id="qgv-yZ-w2T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="17R-4G-id7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9xd-pw-cwb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dct-PF-x3T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="100"/>
+        </scene>
+        <!--Detail Controller-->
+        <scene sceneID="F1R-AA-AEf">
+            <objects>
+                <viewController storyboardIdentifier="DetailController" id="ROQ-CX-CRJ" customClass="DetailController" customModule="Todobox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HlT-gT-Gj8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hel-Mc-gx0">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Move2"/>
+                                <connections>
+                                    <action selector="clickMoveBtn:" destination="ROQ-CX-CRJ" eventType="touchUpInside" id="M14-xF-f9h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Hel-Mc-gx0" firstAttribute="centerX" secondItem="HlT-gT-Gj8" secondAttribute="centerX" id="m2g-R0-vhl"/>
+                            <constraint firstItem="Hel-Mc-gx0" firstAttribute="centerY" secondItem="HlT-gT-Gj8" secondAttribute="centerY" id="zOP-8c-j1c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hrU-tW-yYV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Tc-jb-a9J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3h-oq-Bij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="-35"/>
+        </scene>
+        <!--Detail Controller2-->
+        <scene sceneID="3Th-Q8-Gla">
+            <objects>
+                <viewController storyboardIdentifier="DetailController2" id="ucb-9v-ag7" customClass="DetailController2" customModule="Todobox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CXZ-2x-boq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HelloWorld!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0m-cz-k5W">
+                                <rect key="frame" x="113.5" y="427.5" width="187.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="I0m-cz-k5W" firstAttribute="centerY" secondItem="CXZ-2x-boq" secondAttribute="centerY" id="1nD-az-p99"/>
+                            <constraint firstItem="I0m-cz-k5W" firstAttribute="centerX" secondItem="CXZ-2x-boq" secondAttribute="centerX" id="dml-8w-t5A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4YI-nb-xhm"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YYk-I7-brh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-64" y="139"/>
+            <point key="canvasLocation" x="853.62318840579712" y="645.53571428571422"/>
         </scene>
     </scenes>
 </document>
