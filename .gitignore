@@ -91,5 +91,6 @@ iOSInjectionProject/
 
 
 # Project
+Settings/.DS_Store
 Settings/Settings.xcodeproj
 Settings/Settings/Info.plist
