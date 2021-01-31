@@ -92,5 +92,12 @@ iOSInjectionProject/
 
 # Project
 Settings/.DS_Store
+Settings/Settings/.DS_Store
 Settings/Settings.xcodeproj
 Settings/Settings/Info.plist
+
+BackgroundTaskSample/.DS_Store
+BackgroundTaskSample/BackgroundTaskSample.xcodeproj
+BackgroundTaskSample/BackgroundTaskSample/Info.plist
+
+.DS_Store
